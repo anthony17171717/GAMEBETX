@@ -1,0 +1,145 @@
+/* Estilos generales */
+body {
+    background: linear-gradient(135deg, #001f3f, #003366);
+    color: white;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Contenedor principal */
+.welcome-container {
+    background-color: #0a1f44;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* Título */
+.welcome-container h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+/* Estilos de las opciones */
+.option-group {
+    background-color: #1b2a49;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.option-group:hover {
+    border-color: #007bff;
+}
+
+.option-group.active-green {
+    border-color: #00ff00; /* Verde para opciones 1 y 2 */
+}
+
+.option-group.active-red {
+    border-color: #ff0000; /* Rojo para opción 3 */
+}
+
+.option-icon {
+    font-size: 20px;
+}
+
+.option-label {
+    flex-grow: 1;
+    margin-left: 15px;
+    text-align: left;
+    color: white;
+}
+
+/* Estilo de los radio buttons */
+.radio-button {
+    width: 20px;
+    height: 20px;
+    border: 2px solid white;
+    border-radius: 50%;
+    background-color: transparent;
+    display: inline-block;
+    position: relative;
+}
+
+.radio-button.checked {
+    background-color: #ff0000;
+}
+
+/* Estilo del botón */
+.submit-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .welcome-container {
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    .welcome-container h2 {
+        font-size: 20px;
+    }
+
+    .option-icon {
+        font-size: 18px;
+    }
+
+    .option-label {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .welcome-container {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .welcome-container h2 {
+        font-size: 18px;
+    }
+
+    .option-group {
+        padding: 10px;
+    }
+
+    .option-icon {
+        font-size: 16px;
+    }
+
+    .option-label {
+        font-size: 12px;
+    }
+
+    .submit-btn {
+        padding: 8px;
+        font-size: 14px;
+    }
+}

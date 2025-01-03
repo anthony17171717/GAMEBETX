@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Diseño Responsivo</title>
+    <style>
+      /* Global Styles */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Inter-Regular", Helvetica, Arial, sans-serif;
+        background-color: #ffffff;
+      }
+
+      /* Mobile Design (Default) */
+      .iphone-pro {
+        background-color: #ffffff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        min-height: 100vh;
+      }
+
+      .overlap-group-wrapper {
+        background-color: #ffffff;
+        overflow: hidden;
+        width: 100%;
+        max-width: 402px;
+        height: 874px;
+        margin-top: 20px;
+        position: relative;
+      }
+
+      .overlap-group {
+        position: relative;
+        width: 100%;
+        height: 100%;
+      }
+
+      .rectangle {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: #1a2c38;
+      }
+
+      .div {
+        position: absolute;
+        width: 100%;
+        height: 34px;
+        top: 0;
+        left: 0;
+        background-color: #00254a;
+        box-shadow: 0px 4px 4px #00000040;
+      }
+
+      .img {
+        position: absolute;
+        width: 70px;
+        height: 20px;
+        top: 7px;
+        left: 251px;
+      }
+
+      .rectangle-2 {
+        position: absolute;
+        width: 70px;
+        height: 20px;
+        top: 7px;
+        left: 328px;
+        background-color: #045e61;
+        border-radius: 4px;
+      }
+
+      .image {
+        position: absolute;
+        width: 100%;
+        height: 139px;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+      }
+
+      .text-wrapper {
+        position: absolute;
+        width: 78px;
+        top: 10px;
+        left: 332px;
+        color: #ffffff;
+        font-size: 10px;
+        text-align: center;
+      }
+
+      .text-wrapper-2 {
+        position: absolute;
+        top: 10px;
+        left: 261px;
+        color: #ffffff;
+        font-size: 10px;
+        text-align: center;
+        white-space: nowrap;
+      }
+
+      .imagen-de-whatsapp {
+        position: absolute;
+        width: 100%;
+        height: 189px;
+        top: 37px;
+        left: 0;
+        object-fit: cover;
+      }
+
+      .rectangle-3 {
+        position: absolute;
+        width: 100%;
+        height: 58px;
+        top: 816px;
+        left: 0;
+      }
+
+      .rectangle-4 {
+        position: absolute;
+        width: 100%;
+        height: 37px;
+        top: 236px;
+        left: 0;
+        background-color: #213744;
+        border-radius: 14px;
+      }
+
+      .rectangle-5 {
+        position: absolute;
+        width: 78px;
+        height: 33px;
+        top: 238px;
+        left: 2px;
+        background-color: #d9d9d947;
+        border-radius: 12.5px;
+      }
+
+      .text-wrapper-3,
+      .text-wrapper-4,
+      .text-wrapper-5,
+      .text-wrapper-6,
+      .text-wrapper-7 {
+        position: absolute;
+        top: 248px;
+        color: #ffffff;
+        font-size: 10px;
+        text-align: center;
+        white-space: nowrap;
+      }
+
+      .text-wrapper-3 {
+        left: 22px;
+      }
+
+      .text-wrapper-4 {
+        left: 94px;
+      }
+
+      .text-wrapper-5 {
+        left: 142px;
+      }
+
+      .text-wrapper-6 {
+        left: 252px;
+      }
+
+      .text-wrapper-7 {
+        left: 327px;
+      }
+
+      /* Responsive Design */
+      @media (min-width: 768px) {
+        /* For Tablets */
+        .iphone-pro {
+          flex-direction: row;
+          justify-content: center;
+        }
+
+        .overlap-group-wrapper {
+          width: 70%;
+          height: auto;
+        }
+
+        .text-wrapper,
+        .text-wrapper-2 {
+          font-size: 12px;
+        }
+
+        .image {
+          height: 200px;
+        }
+
+        .text-wrapper-3,
+        .text-wrapper-4,
+        .text-wrapper-5,
+        .text-wrapper-6,
+        .text-wrapper-7 {
+          font-size: 12px;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        /* For Desktop */
+        .iphone-pro {
+          flex-direction: row;
+          justify-content: center;
+        }
+
+        .overlap-group-wrapper {
+          width: 50%;
+          height: auto;
+        }
+
+        .text-wrapper,
+        .text-wrapper-2 {
+          font-size: 14px;
+        }
+
+        .image {
+          height: 300px;
+        }
+
+        .text-wrapper-3,
+        .text-wrapper-4,
+        .text-wrapper-5,
+        .text-wrapper-6,
+        .text-wrapper-7 {
+          font-size: 14px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="iphone-pro">
+      <div class="overlap-group-wrapper">
+        <div class="overlap-group">
+          <div class="rectangle"></div>
+          <div class="div"></div>
+          <img class="img" src="img/rectangle-3.svg" alt="Logo" />
+          <div class="rectangle-2"></div>
+          <img class="image" src="img/image.png" alt="Imagen principal" />
+          <div class="text-wrapper">Iniciar sesión</div>
+          <div class="text-wrapper-2">Registrate</div>
+          <img
+            class="imagen-de-whatsapp"
+            src="img/imagen-de-whatsapp-2024-12-10-a-las-10-29-04-7b494d96-1.png"
+            alt="Imagen de WhatsApp"
+          />
+          <img class="rectangle-3" src="img/rectangle-5.png" alt="Fondo inferior" />
+          <div class="rectangle-4"></div>
+          <div class="rectangle-5"></div>
+          <div class="text-wrapper-3">Lobby</div>
+          <div class="text-wrapper-4">En vivo</div>
+          <div class="text-wrapper-5">Ranking de apuestas</div>
+          <div class="text-wrapper-6">Mis favoritos</div>
+          <div class="text-wrapper-7">Promociones</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

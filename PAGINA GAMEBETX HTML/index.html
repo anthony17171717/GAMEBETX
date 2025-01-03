@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regalo de Bienvenida</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="welcome-container">
+        <h2>Escoge tu regalo de bienvenida</h2>
+        <div class="option-group" onclick="selectOption(this, 'green')">
+            <div class="option-icon">🎲</div>
+            <div class="option-label">Casino:100 giros, Gratis</div>
+            <div class="radio-button"></div>
+        </div>
+        <div class="option-group" onclick="selectOption(this, 'green')">
+            <div class="option-icon">⚽</div>
+            <div class="option-label">Deportivas: Apuesta Gratis de L100</div>
+            <div class="radio-button"></div>
+        </div>
+        <div class="option-group" onclick="selectOption(this, 'red')">
+            <div class="option-icon">🗑</div>
+            <div class="option-label">No quiero un bono de bienvenida</div>
+            <div class="radio-button"></div>
+        </div>
+        <button class="submit-btn" onclick="redirectToRegistration()">¡Reclama tu regalo!</button>
+    </div>
+
+    <script>
+        function selectOption(selected, color) {
+            const options = document.querySelectorAll('.option-group');
+            options.forEach(option => {
+                option.classList.remove('active-green', 'active-red');
+                option.querySelector('.radio-button').classList.remove('checked');
+            });
+
+            if (color === 'green') {
+                selected.classList.add('active-green');
+            } else if (color === 'red') {
+                selected.classList.add('active-red');
+            }
+
+            selected.querySelector('.radio-button').classList.add('checked');
+        }
+
+        function redirectToRegistration() {
+            // Reemplaza la URL de la página de registro
+            window.location.href = "registro.html"; // Cambia por la URL real de tu página de registro
+        }
+    </script>
+</body>
+</html>
